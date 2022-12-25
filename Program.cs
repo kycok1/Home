@@ -33,31 +33,31 @@
 
 // // ДЗ
 // // task 25
-Console.WriteLine("введите число A");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число B");
-int b = Convert.ToInt32(Console.ReadLine());
-int step = a;
+// Console.WriteLine("введите число A");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("введите число B");
+// int b = Convert.ToInt32(Console.ReadLine());
+// int step = a;
 
-for (int i = 1; i < b; i++)
-{
-step = step * a;
-}
-Console.WriteLine("A в степени B равно: " + step);
+// for (int i = 1; i < b; i++)
+// {
+// step = step * a;
+// }
+// Console.WriteLine("A в степени B равно: " + step);
 
 
 //Task 27
-Console.WriteLine("введите число");
-int i = Convert.ToInt32(Console.ReadLine());
-int sum = 0;
+// Console.WriteLine("введите число");
+// int i = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
 
-while (i > 0)
-{
-int num = i % 10;
-i = i / 10;
-sum = sum + num;
-}
-Console.WriteLine("сумма всех цифр в числе равна: " + sum);
+// while (i > 0)
+// {
+// int num = i % 10;
+// i = i / 10;
+// sum = sum + num;
+// }
+// Console.WriteLine("сумма всех цифр в числе равна: " + sum);
 
 //task 29 
 
@@ -76,5 +76,104 @@ Console.WriteLine("сумма всех цифр в числе равна: " + su
 //  return numbers[a];
 // }
 
+//task 34
+// Console.WriteLine ("Введите размер массива: ");
+// int length = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите минимальное значение массива: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите максимальное значение массива: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// int[] Array= GetArray(length, min, max);
+// Console.WriteLine($"[{string.Join(", ", Array)}]");
+// FindEven(Array);
 
+// int[] GetArray(int size, int minValue, int maxValue)
+// {
+//     Random rnd= new Random();
+//     int[] result= new int[size];
+//     for(int i= 0; i < result.Length; i++)
+//     {
+//         result[i] = rnd.Next(minValue, maxValue+ 1);
+//     }
+//     return result;
+//     }
+//     void FindEven(int[] MyArray)
+//     {
+//         int even=0;
+//         for(int i= 0; i < MyArray.Length; i++)
+//      {
+//         if(MyArray[i]%2==0)
+//         {
+//             even=even+1;
+//             }
+//     }
+// Console.WriteLine($"Чётных чисел {even}");
+//  }
+    
+//task 36
+// Console.WriteLine ("Введите размер массива: ");
+// int length = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите минимальное значение массива: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите максимальное значение массива: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// int[] Array = GetArray(length, min, max);
+// Console.WriteLine($"[{string.Join(", ", Array)}]");
+// FindOdd(Array);
+
+// int[] GetArray( int size, int minValue, int maxValue)
+// {
+//     Random rnd = new Random();
+//     int[] result = new int[size];
+//     for(int i = 0; i < result.Length; i++)
+//     {
+//         result[i] = rnd.Next(minValue, maxValue + 1);
+//     }
+//     return result;
+// }
+// void FindOdd(int[] MyArray)
+// {
+//     int odd = 0;
+//     for (int i =1; i < MyArray.Length; i = i +2)
+//     {
+//         odd = odd + MyArray[i];
+//     }
+//     Console.WriteLine($"Сумма чисел на нечётных позициях {odd}");
+// }
+
+// task 38     Я не понимаю суть проблемы, делал как предыдущие задания
+Console.WriteLine ("Введите размер массива: ");
+int length = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное значение массива: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите максимальное значение массива: ");
+int max = Convert.ToInt32(Console.ReadLine());
+int[] Array = GetArray(length, min, max);
+Console.WriteLine($"[{string.Join(", ", Array)}]");
+FindDifference( Array, max, min);
+int[] GetArray(int size, int minValue, int maxValue);
+{
+    Random rnd = new Random();
+    int[] result = new int[size];
+    for(int i = 0; i< result.Length; i ++)
+    {
+        result[i] = rnd.Next(minValue, maxValue + 1);
+    }
+    return result;
+}
+void FindDifference(int[] MyArray, int minVal, maxval)
+{
+    for(int i =0; i < MyArray.Length; i ++)
+    {
+        if (MyArray[i] < minVal)
+        {
+            minVal = MyArray[1];
+        }
+        if (MyArray[i]> maxVal)
+        {
+            maxval = MyArray[i];
+        }
+    }
+    Console.WriteLine($"Разница {maxVal - minVal}");
+}
 
